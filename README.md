@@ -10,7 +10,7 @@ git clone https://github.com/Alyetama/quick-MongoDB.git
 cd quick-MongoDB
 ```
 
-- Edit `.env` file:
+- Edit the `.env` file:
 
 ```shell
 mv .env.example .env
@@ -31,18 +31,17 @@ docker-compose up -d
 bash backup.sh --once
 ```
 
-- Backup every *n* period of time (default: 1d)
+- Backup every *n* period of time (default: 1d):
 
 ```shell
 # s for seconds (default)
 # m for minutes
 # h for hours
 # d for days
-
-bash backup.sh every 1h
+bash backup.sh --every 1h
 ```
 
-- Setup a systemctl service to run in the background
+- Setup a systemctl service to run in the background (Linux):
 
 ```shell
 echo "Description=quick-MongoDB
